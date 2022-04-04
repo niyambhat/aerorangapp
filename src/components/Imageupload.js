@@ -3,8 +3,8 @@ import React, { useState} from 'react'
 
 function Imageupload() {
 const [file, setFile]=useState('');
-const [lat, setLat] = useState();
-const [long, setLong] = useState();
+const [lat, setLat] = useState(0);
+const [long, setLong] = useState(0);
 
 const handleFile=(e)=>{
 setFile(e.target.files[0]);
@@ -12,23 +12,20 @@ setFile(e.target.files[0]);
 
 const handleLat=(e)=>{
 setLat(e.target.value);
-console.log(lat);
 }
 
 const handleLong=(e)=>{
 setLong(e.target.value);
-console.log(long);
 }
 
 const buttonhandler =(e)=>{
 
   e.preventDefault();
   let tokenID= localStorage.getItem('token');
-  let x=123;
   var bodyFormData = new FormData();
   bodyFormData.append('image', file);
-  bodyFormData.append('latitude', 0);
-  bodyFormData.append('longitude', 0);
+  bodyFormData.append('latitude', lat);
+  bodyFormData.append('longitude', long);
   axios({
     method: "post",
     url: "https://dashboard.api-aeroranger.com/api/v1/plates/upload-pr",
