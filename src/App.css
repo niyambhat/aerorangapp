@@ -36,7 +36,7 @@ input[type=submit]:hover {
 }
 
 .wrap{
-  max-width:1250px;
+  max-width:700px;
   margin: auto;
 }
 
@@ -68,9 +68,12 @@ header{
   max-width: 80%;
 }
 form{
-  max-width: 500px;
   margin: auto;
   background: #2A2829;
   padding: 10px 19px;
   color:white
+}
+
+.error{
+  color:red;
 }

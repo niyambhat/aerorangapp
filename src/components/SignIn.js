@@ -50,7 +50,7 @@ const buttonhandler =(e)=>{
   
     <input type="submit" onClick={buttonhandler} value="Submit"/>
   </form>
-    {error}
+    {error && <p className='errorSign'>{error}</p>}
     </div>
   )
 }
