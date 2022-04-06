@@ -7,8 +7,7 @@ function Layout({children}) {
         <Navigation/>
           <div className="wrap">      
             {children}</div>
-      </Fragment>
-    
+      </Fragment>   
   )
 }
 

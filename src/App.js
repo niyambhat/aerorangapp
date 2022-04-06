@@ -8,6 +8,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import Vehicle from './components/pages/Vehicle';
 
 function App() {
   return (

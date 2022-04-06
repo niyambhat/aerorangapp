@@ -4,7 +4,6 @@ import Imageupload from '../Imageupload';
 function Dashboard() {
   return (
     <div>
-    <h2>Dashboard</h2>
     <Imageupload/>
     </div>
   )
